@@ -1,0 +1,25 @@
+@startuml
+entity "Task" as task {
+  * id : guid <<generated>>
+  --
+  * status : enum <<FK>>
+  * name : text
+  details : text
+  prerequesite_tasks : <<FK>> 
+  date_due : datetime
+}
+
+entity "PrerequisitTask" as task2 {
+  prerequisite_task : <<FK>>
+  dependent_task : <<FK>>
+}
+
+entity "Status" as status {
+  Locked
+  Incomplete
+  Complete
+}
+
+task }o--o{ task2
+task }o--|| status
+@enduml
