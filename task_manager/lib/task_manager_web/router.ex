@@ -17,6 +17,7 @@ defmodule TaskManagerWeb.Router do
     pipe_through :api
 
     resources "/languages", LanguageController, except: [:new, :edit]
+    resources "/tasks", TaskController, except: [:new, :edit]
   end
 
   scope "/", TaskManagerWeb do

@@ -50,8 +50,8 @@ config :task_manager, TaskManagerWeb.Endpoint,
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/phoenix_react_playground_web/views/.*(ex)$},
-      ~r{lib/phoenix_react_playground_web/templates/.*(eex)$}
+      ~r{lib/task_manager_web/views/.*(ex)$},
+      ~r{lib/task_manager_web/templates/.*(eex)$}
     ]
   ]
 

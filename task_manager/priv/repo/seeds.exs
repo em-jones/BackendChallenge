@@ -13,23 +13,20 @@ defmodule TaskManager.DatabaseSeeder do
   and so on) as they will fail if something goes wrong.
   """
   alias TaskManager.Repo
-  alias TaskManager.Example.Language
+  alias TaskManager.Task.Task
 
   # Clear the database first before seeding
-  Repo.delete_all Language
+  Repo.delete_all Task
 
-  Repo.insert! %Language{
-    name: "English",
-    proverb: "A penny saved is a penny earned.",
+  Repo.insert! %Task{
+    name: "Task 1"
   }
 
-  Repo.insert! %Language{
-    name: "Indonesian",
-    proverb: "Dimana ada kemauan, di situ ada jalan.",
+  Repo.insert! %Task{
+    name: "Task 2"
   }
 
-  Repo.insert! %Language{
-    name: "Dutch",
-    proverb: "Die goed doet, goed ontmoet.",
+  Repo.insert! %Task{
+    name: "Task 3"
   }
 end

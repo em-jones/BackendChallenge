@@ -1,5 +1,5 @@
 defmodule TaskManagerWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :phoenix_react_playground
+  use Phoenix.Endpoint, otp_app: :task_manager
 
   socket "/socket", TaskManagerWeb.UserSocket,
     websocket: true,
@@ -11,7 +11,7 @@ defmodule TaskManagerWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :phoenix_react_playground,
+    from: :task_manager,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -39,7 +39,7 @@ defmodule TaskManagerWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_phoenix_react_playground_key",
+    key: "_task_manager_key",
     signing_salt: "rgGfuEiO"
 
   plug TaskManagerWeb.Router

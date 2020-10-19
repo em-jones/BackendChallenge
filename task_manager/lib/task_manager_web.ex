@@ -30,7 +30,7 @@ defmodule TaskManagerWeb do
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/phoenix_react_playground_web/templates",
+        root: "lib/task_manager_web/templates",
         namespace: TaskManagerWeb
 
       # Import convenience functions from controllers

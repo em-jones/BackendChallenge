@@ -3,10 +3,24 @@ services:
   db:
     image: postgres:12-alpine
     environment:
-      - POSTGRES_PASSWORD=undigitalpassword
+      POSTGRES_PASSWORD: undigitalpassword
     ports:
       - "5432:5432"
     volumes:
       - db:/var/lib/postgresql/data
+  # app:
+    # build:
+    #   context: .
+    # environment:
+    #   PGUSER: postgres
+    #   PGPASSWORD: undigitalpassword
+    #   PGDATABASE: task_manager
+    #   PGPORT: 5432
+    #   PGHOST: db
+    # ports:
+    #   - "4000:4000"
+    # depends_on:
+    #   - db
+    
 volumes:
   db:
